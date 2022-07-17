@@ -74,4 +74,127 @@ select {
   }
 }
 
-/* font-family: 'Karla', sans-serif; */
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --lite-cyan: hsl(179, 63%, 48%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    --light-gray: hsl(204, 43%, 93%);
+    --fadded-gray: hsla(203, 44%, 93%, 0.5);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+.container{
+    width: 90%;
+    max-width: 350px;
+    margin-inline: auto;
+    background-color: white;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero,
+.sub,
+.info,
+.footer{
+    padding: 1.5rem;
+}
+
+.hero h1{
+    color: var(--cyan);
+}
+
+.hero h2{
+    color: var(--bright-yellow);
+    margin: 1.5rem 0;    
+}
+
+.hero p{
+    color: var(--grayish-blue);
+}
+
+.sub{
+    background-color: var(--cyan);
+}
+
+.sub h2,
+.dollar,
+.sell-info{
+    color: white;
+}
+
+.month{
+    color: var(--fadded-gray);
+    margin-top: 1rem;
+}
+
+.dollar{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.button{
+    background-color: var(--bright-yellow);
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.info{
+    background-color: var(--lite-cyan);
+}
+
+.info h2,
+.info p{
+    color: var(--light-gray);
+}
+
+.info p{
+    margin-top: 1rem;
+    width: 75%;
+}
+
+.attribution{
+    color: var(--grayish-blue);
+}
+
+.attribution a{
+    color: var(--grayish-blue);
+    text-decoration: none;
+    transition: .2s ease-in;
+}
+
+.attribution a:hover{
+    color: var(--cyan);
+}
+
+@media (min-width: 800px){
+    .container{
+        max-width: 1000px;
+    }
+
+    .desktop-flex{
+        display: flex;        
+    }
+
+    .sub,
+    .info{
+        width: 50%;
+    }
+}
